@@ -5,7 +5,7 @@ function Header({ currentSection, setCurrentSection }) {
 
   return (
     <header>
-      <h1>Developer's Name</h1>
+      <h1>William Hoenig</h1>
       <nav>
         <ul>
           {sections.map((section) => (

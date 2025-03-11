@@ -24,9 +24,9 @@ function Contact() {
   };
 
   return (
-    <section>
+    <section className="contact-section">
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -34,8 +34,9 @@ function Contact() {
           value={formData.name}
           onChange={handleChange}
           onBlur={handleBlur}
+          className="contact-input"
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className="error">{errors.name}</p>}
         <input
           type="email"
           name="email"
@@ -43,17 +44,19 @@ function Contact() {
           value={formData.email}
           onChange={handleChange}
           onBlur={handleBlur}
+          className="contact-input"
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className="error">{errors.email}</p>}
         <textarea
           name="message"
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
           onBlur={handleBlur}
+          className="contact-textarea"
         />
-        {errors.message && <p>{errors.message}</p>}
-        <button type="submit">Submit</button>
+        {errors.message && <p className="error">{errors.message}</p>}
+        <button type="submit" className="contact-button">Submit</button>
       </form>
     </section>
   );
